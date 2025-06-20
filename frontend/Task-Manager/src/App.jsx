@@ -12,6 +12,9 @@ import ManageTasks from './pages/Admin/ManageTasks';
 import CreateTask from './pages/Admin/CreateTask';
 import ManageUsers from './pages/Admin/ManageUsers';
 
+import UserDashboard from './pages/User/User Dashboard';
+import ViewsTaskDetails from './pages/User/ViewsTaskDetails';
+
 const App = () => {
   return (
     <div>
@@ -29,7 +32,8 @@ const App = () => {
           </Route>
           {/* User Routes */}
           <Route element={<PrivateRoute allowedRoles={["admin"]} />}>
-            <Route path="/user/dashboard" element={<Dashboard />} />
+            <Route path="/user/dashboard" element={<UserDashboard />} />
+            <Route path="/user/task-details/:id" element={<ViewsTaskDetails />} />
           </Route>
         </Routes>
       </Router>
