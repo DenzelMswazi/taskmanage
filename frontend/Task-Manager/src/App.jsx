@@ -7,13 +7,13 @@ import {
 import SignUp from './pages/Auth/SignUp';
 import Dashboard from './pages/Admin/Dashboard';
 import Login from './pages/Auth/Login';
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from './routes/PrivateRoute';
 import ManageTasks from './pages/Admin/ManageTasks';
 import CreateTask from './pages/Admin/CreateTask';
 import ManageUsers from './pages/Admin/ManageUsers';
 
-import UserDashboard from './pages/User/User Dashboard';
-import ViewsTaskDetails from './pages/User/ViewsTaskDetails';
+import UserDashboard from './pages/User/UserDashboard';
+import ViewTaskDetails from './pages/User/ViewTaskDetails';
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ const App = () => {
           {/* User Routes */}
           <Route element={<PrivateRoute allowedRoles={["admin"]} />}>
             <Route path="/user/dashboard" element={<UserDashboard />} />
-            <Route path="/user/task-details/:id" element={<ViewsTaskDetails />} />
+            <Route path="/user/task-details/:id" element={<ViewTaskDetails />} />
           </Route>
         </Routes>
       </Router>
