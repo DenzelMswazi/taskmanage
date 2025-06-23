@@ -18,10 +18,10 @@ app.use(
 app.use(express.json());
 
 //Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/tasks", taskRoutes);
-app.use("/api/reports", reportRoutes);
+// app.use("/api/auth", authRoutes);
+// app.use("/api/users", userRoutes);
+// app.use("/api/tasks", taskRoutes);
+// app.use("/api/reports", reportRoutes);
 
 
 // Routes
